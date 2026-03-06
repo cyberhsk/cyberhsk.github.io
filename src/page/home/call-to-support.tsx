@@ -1,12 +1,19 @@
+import rep_ib_icon from "@assets/image/rep-ib.png";
 import { Button } from "@radix-ui/themes";
+import { FloatingImage } from "@shared/components/animation";
 import { RandomDecorations } from "@shared/components/ui";
 import { PAGE_FB_URL } from "@shared/constant";
 import { MessageCircle } from "lucide-react";
-
 export const CallToSupportSection = () => {
   return (
     <section className=" py-16 lg:py-24 relative overflow-hidden">
       <RandomDecorations count={4} />
+      <FloatingImage
+        src={rep_ib_icon}
+        alt="rep-ib"
+        className="absolute h-70 right-0 top-10"
+      />
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">

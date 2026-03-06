@@ -1,6 +1,7 @@
+import team_icon from "@assets/image/team.png";
 import { Text } from "@radix-ui/themes";
+import { FloatingImage } from "@shared/components/animation";
 import { RandomDecorations } from "@shared/components/ui";
-import { FileText } from "lucide-react";
 
 export function AboutUsSection() {
   return (
@@ -12,15 +13,12 @@ export function AboutUsSection() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             {/* Image on left */}
             <div className="flex-1">
-              <div className="w-full h-64 lg:h-80 bg-linear-to-br from-amber-100 to-orange-100 rounded-2xl flex items-center justify-center shadow-lg">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FileText className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-amber-700 font-semibold">
-                    HSK Registration
-                  </p>
-                </div>
+              <div className="w-full flex items-center justify-center">
+                <FloatingImage
+                  src={team_icon}
+                  alt="team"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

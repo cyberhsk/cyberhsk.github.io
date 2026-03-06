@@ -1,4 +1,4 @@
-import team_work from "@assets/image/team-work.webp";
+import the_boy_icon from "@assets/image/the-boy.png";
 import { Button, Flex } from "@radix-ui/themes";
 import { FloatingImage, GradientText } from "@shared/components/animation";
 import { PAGE_FB_URL } from "@shared/constant";
@@ -54,8 +54,8 @@ export function BannerSection() {
       <div className="z-10 max-w-6xl mx-auto px-6 py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <FloatingImage
-            src={team_work}
-            alt="Happy person using phone"
+            src={the_boy_icon}
+            alt="The boy"
             className="hidden lg:block md:block w-full h-full object-cover"
           />
 
