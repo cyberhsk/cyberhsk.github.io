@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import { SnackProvider, ThemeProvider } from "./provider";
 import { AppRouter } from "./router";
 
