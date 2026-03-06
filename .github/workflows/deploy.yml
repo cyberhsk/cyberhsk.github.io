@@ -19,9 +19,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: "npm"
 
-      - run: npm install
+      - run: npm ci
       - run: npm run build
+
+      - name: Check if dist exists
+        run: ls -R dist
 
       - uses: actions/upload-pages-artifact@v3
         with:
