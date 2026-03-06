@@ -19,7 +19,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <img
               src={logo}
-              alt="logo"
+              alt="CYBER HSK"
               className="w-12 h-12 rounded border border-amber-700"
             />
           </div>

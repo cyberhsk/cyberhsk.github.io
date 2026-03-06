@@ -30,8 +30,8 @@ export function AboutUsSection() {
                 Về Chúng Tôi
               </h1>
               <Text className="leading-relaxed text-lg mb-4">
-                Chúng tôi là đội ngũ chuyên hỗ trợ học viên đăng ký thi HSK một
-                cách nhanh chóng và thuận tiện nhất.
+                CYBER HSK là đội ngũ chuyên hỗ trợ học viên ghi danh để thi HSK
+                một cách nhanh chóng và thuận tiện nhất.
               </Text>
               <Text className="leading-relaxed text-lg">
                 Với kinh nghiệm nhiều năm, chúng tôi cam kết mang đến dịch vụ

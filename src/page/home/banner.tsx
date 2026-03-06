@@ -62,8 +62,11 @@ export function BannerSection() {
           <div className="text-center md:text-left order-1 md:order-2">
             <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               CYBER <span className="text-[#00FFFF]">HSK</span>
-              <br />
+            </h1>
+            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               GHI DANH
+            </h1>
+            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               <Flex className="items-center">
                 <GradientText className="text-amber-500">
                   Nhanh Chóng

@@ -6,18 +6,16 @@ export const PrivacyPolicyPage = () => {
     <div className="container mx-auto px-4 py-12 lg:py-16 relative overflow-hidden">
       <div className="max-w-4xl mx-auto p-8 lg:p-12">
         <h1 className="text-3xl lg:text-4xl font-bold">
-          Chính Sách Bảo Mật Cho Cyber HSK Desktop
+          Chính Sách Bảo Mật Cho CYBER HSK Desktop
         </h1>
         <div className="my-2 mb-4">
-          <Text color="gray">
-            Cập nhật lần cuối: {new Date().toLocaleDateString("vi-VN")}
-          </Text>
+          <Text color="gray">Cập nhật lần cuối: 06/03/2026</Text>
         </div>
         <Flex direction="column" gap="2" className="prose prose-lg max-w-none ">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">1. Giới thiệu</h2>
             <p className="leading-relaxed">
-              Cyber HSK cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo
+              CYBER HSK cam kết bảo vệ quyền riêng tư của bạn. Chính sách bảo
               mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ
               thông tin cá nhân của bạn khi sử dụng dịch vụ của chúng tôi.
             </p>
@@ -45,7 +43,27 @@ export const PrivacyPolicyPage = () => {
               </li>
             </ul>
           </section>
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              3. Thông tin chúng tôi thu thập
+            </h2>
 
+            <p className="leading-relaxed mb-4">
+              Khi bạn đăng nhập bằng Google Sign-In, chúng tôi có thể thu thập
+              các thông tin sau:
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Email Google của bạn</li>
+              <li>Tên hiển thị (display name)</li>
+              <li>Ảnh đại diện Google (nếu có)</li>
+            </ul>
+
+            <p className="mt-4">
+              Những thông tin này chỉ được sử dụng để xác thực tài khoản trong
+              ứng dụng CYBER HSK Desktop.
+            </p>
+          </section>
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
               4. Cách chúng tôi sử dụng thông tin
@@ -54,7 +72,7 @@ export const PrivacyPolicyPage = () => {
               Thông tin của bạn được sử dụng cho các mục đích sau:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Xử lý đăng nhập trong ứng dụng (Cyber HSK Desktop)</li>
+              <li>Xử lý đăng nhập trong ứng dụng (CYBER HSK Desktop)</li>
               <li>Liên hệ với bạn về các vấn đề kỹ thuật hoặc hỗ trợ</li>
               <li>Cải thiện dịch vụ của chúng tôi</li>
             </ul>

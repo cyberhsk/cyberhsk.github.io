@@ -7,7 +7,7 @@ export const TermsOfServicePage = () => {
       <RandomDecorations count={20} />
       <div className="max-w-4xl mx-auto  p-8 lg:p-12">
         <h1 className="text-3xl lg:text-4xl font-bold  mb-4">
-          Điều Khoản Sử Dụng cho Cyber HSK Desktop
+          Điều Khoản Sử Dụng cho CYBER HSK Desktop
         </h1>
         <div className="mb-6">
           <Text color="gray">Cập nhật lần cuối: 06/03/2026</Text>
@@ -19,7 +19,7 @@ export const TermsOfServicePage = () => {
               1. Chấp nhận điều khoản
             </h2>
             <p className="leading-relaxed">
-              Bằng việc truy cập và sử dụng dịch vụ Cyber HSK Desktop, bạn đồng
+              Bằng việc truy cập và sử dụng dịch vụ CYBER HSK Desktop, bạn đồng
               ý tuân thủ và chịu ràng buộc bởi các điều khoản và điều kiện sau
               đây. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản
               này, vui lòng không sử dụng dịch vụ của chúng tôi.
@@ -29,8 +29,8 @@ export const TermsOfServicePage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold  mb-4">2. Mô tả dịch vụ</h2>
             <p className="leading-relaxed mb-4">
-              Cyber HSK cung cấp công cụ quản lý và tự động ghi danh HSK (Hanyu
-              Shuiping Kaoshi - Kỳ thi năng lực tiếng Trung Quốc) tên là Cyber
+              CYBER HSK cung cấp công cụ quản lý và tự động ghi danh HSK (Hanyu
+              Shuiping Kaoshi - Kỳ thi năng lực tiếng Trung Quốc) tên là CYBER
               HSK Desktop bao gồm:
             </p>
             <ul className="list-disc pl-6 space-y-2">
@@ -71,7 +71,7 @@ export const TermsOfServicePage = () => {
             </h2>
             <p className="leading-relaxed">
               Tất cả nội dung trên website/application bao gồm văn bản, hình
-              ảnh, logo, thiết kế đều thuộc quyền sở hữu của Cyber HSK hoặc các
+              ảnh, logo, thiết kế đều thuộc quyền sở hữu của CYBER HSK hoặc các
               bên cấp phép. Nghiêm cấm sao chép, phân phối hoặc sử dụng mà không
               có sự cho phép bằng văn bản.
             </p>
