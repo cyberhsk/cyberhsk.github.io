@@ -15,11 +15,13 @@ export const ExamScheduleSection = () => {
         {/* Google Calendar Embed */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <iframe
-            src="https://calendar.google.com/calendar/embed?src=your-calendar-id%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0"
-            className="w-full h-[600px] border-0"
-            title="Lịch thi HSK"
-            loading="lazy"
-          />
+            src="https://calendar.google.com/calendar/embed?src=981a8924899f21ea33698b1680d2129a891e98e9b53ef8cdeea16a2e37ec06e3%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh"
+            style={{ border: "0" }}
+            width="100%"
+            height="600"
+            frameBorder="0"
+            scrolling="no"
+          ></iframe>
         </div>
 
         {/* Note */}
