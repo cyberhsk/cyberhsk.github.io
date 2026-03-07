@@ -78,7 +78,7 @@ export function BannerSection() {
             </Flex>
 
             <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
-              Ghi danh hộ – Tư vấn kỳ thi – Chọn lịch thi phù hợp
+              Ghi danh hộ HSK – Tư vấn kỳ thi – Chọn lịch thi phù hợp
             </p>
             <a href={"#about-us"} rel="noopener noreferrer">
               <Button size="4" className="cursor-pointer!">
