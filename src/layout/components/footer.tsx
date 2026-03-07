@@ -7,6 +7,7 @@ const quickLinks = [
   { name: "Trang chủ", href: "#" },
   { name: "Giới thiệu", href: "#about-us" },
   { name: "Quy trình", href: "#flow-register" },
+  { name: "Bảng giá", href: "#hsk-pricing" },
   { name: "Địa điểm", href: "#locations" },
   { name: "Lịch thi", href: "#test-schedule" },
   { name: "Đối tác", href: "#partners" },
