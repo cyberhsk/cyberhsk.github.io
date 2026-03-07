@@ -1,8 +1,8 @@
-import { Button, Text } from "@radix-ui/themes";
+import { Button, Flex, Text } from "@radix-ui/themes";
 import { RandomDecorations } from "@shared/components/ui";
 import { useHskPricingStore } from "@shared/store";
 import { cn, convertPrice, trackEvent } from "@shared/util";
-import { Check, Zap } from "lucide-react";
+import { Check, Dot, Zap } from "lucide-react";
 
 export const HskPricing = () => {
   const pricings = useHskPricingStore((s) => s.pricings);
@@ -82,7 +82,19 @@ export const HskPricing = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-25">
+              <Flex className="mt-10 flex-col items-start gap-1">
+                {pricing?.des?.length == 0
+                  ? null
+                  : pricing?.des.map((des, index) => (
+                      <Flex key={index} className="items-center gap-2">
+                        <Dot color="cyan" />
+                        <Text size="2" color="gray">
+                          {des}
+                        </Text>
+                      </Flex>
+                    ))}
+              </Flex>
+              <div className="mt-15">
                 <a href={"#register-support"}>
                   <Button
                     size="4"

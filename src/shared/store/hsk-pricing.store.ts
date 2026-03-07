@@ -10,6 +10,7 @@ type RawHskPricingType = {
   popular: boolean;
   unit?: string;
   publish: boolean;
+  des: string;
 };
 
 type HskPricingState = {
@@ -44,10 +45,15 @@ export const useHskPricingStore = create<HskPricingState>((set, get) => ({
           text: service.replace("!", ""),
         }));
 
+        const des = item.des
+          ? item.des.split("\n").filter((d) => d.trim() !== "")
+          : [];
+
         return {
           ...item,
           price: Number(item.price),
           serrvices,
+          des,
         };
       });
 

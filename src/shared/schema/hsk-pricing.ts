@@ -8,4 +8,5 @@ export interface HskPricing {
   popular: boolean;
   unit?: string;
   publish: boolean;
+  des: string[];
 }
