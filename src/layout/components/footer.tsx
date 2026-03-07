@@ -1,6 +1,7 @@
 import logo from "@assets/logo.png";
 import { Separator } from "@radix-ui/themes";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { PAGE_FB_URL } from "@shared/constant";
+import { Facebook, Mail, MapPin, Phone } from "lucide-react";
 import { NavLink } from "react-router-dom";
 const quickLinks = [
   { name: "Trang chủ", href: "#" },
@@ -8,6 +9,7 @@ const quickLinks = [
   { name: "Quy trình", href: "#flow-register" },
   { name: "Địa điểm", href: "#locations" },
   { name: "Lịch thi", href: "#test-schedule" },
+  { name: "Đối tác", href: "#partners" },
 ];
 
 const legalLinks = [
@@ -76,6 +78,17 @@ export function Footer() {
             <div>
               <h3 className="font-semibold text-lg mb-4">Liên hệ</h3>
               <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Facebook className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                  <a
+                    href={PAGE_FB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                  >
+                    Cyber HSK
+                  </a>
+                </li>
                 <li className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                   <a

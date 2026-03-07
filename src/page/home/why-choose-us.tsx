@@ -41,11 +41,14 @@ export const WhyChooseUsSection = () => {
   return (
     <section className="relative overflow-hidden py-16 lg:py-24">
       <RandomDecorations count={6} />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Tại Sao Chọn Chúng Tôi?
-          </h2>
+          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+            tại sao <span className="text-primary">bạn nên chọn</span> Cyber hsk
+          </h1>
+
           <Text color="gray" className="max-w-2xl mx-auto text-lg">
             Chúng tôi cam kết mang đến trải nghiệm đăng ký thi HSK tốt nhất cho
             bạn
@@ -55,7 +58,7 @@ export const WhyChooseUsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
           {features.map((feature, index) => (
             <Floating delay={index * 0.12} key={index}>
-              <Card className="h-full bg-white/10 border-white/20 hover:bg-white/15 transition-colors">
+              <Card className="h-full bg-[rgb(26_11_46/0.4)] backdrop-blur-xs border-white/20  transition-colors">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-5">
                     <div className="w-14 h-14 rounded-xl flex items-center justify-center ">

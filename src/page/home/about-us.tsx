@@ -7,7 +7,8 @@ export function AboutUsSection() {
   return (
     <section className="py-16 lg:py-24 relative overflow-hidden" id="about-us">
       <RandomDecorations count={8} />
-
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -24,9 +25,10 @@ export function AboutUsSection() {
 
             {/* Content on right */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-3xl lg:text-4xl font-extrabold mb-4">
-                Về Chúng Tôi
+              <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+                Đội ngũ của <span className="text-primary">CYBER HSK</span>
               </h1>
+
               <Text className="leading-relaxed text-lg mb-4">
                 CYBER HSK là đội ngũ chuyên hỗ trợ học viên ghi danh để thi HSK
                 một cách nhanh chóng và thuận tiện nhất.

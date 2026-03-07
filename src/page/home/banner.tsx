@@ -1,12 +1,13 @@
 import the_boy_icon from "@assets/image/the-boy.png";
 import { Button, Flex } from "@radix-ui/themes";
 import { FloatingImage, GradientText } from "@shared/components/animation";
-import { PAGE_FB_URL } from "@shared/constant";
 import { Zap } from "lucide-react";
 
 export function BannerSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#2B004F] pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 border-2 border-amber-500/20 rounded-full"></div>
         <div className="absolute top-40 right-20 w-24 h-24 border-2 border-amber-500/20 rounded-full"></div>
@@ -79,9 +80,9 @@ export function BannerSection() {
             <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
               Ghi danh hộ – Tư vấn kỳ thi – Chọn lịch thi phù hợp
             </p>
-            <a href={PAGE_FB_URL} target="_blank" rel="noopener noreferrer">
+            <a href={"#about-us"} rel="noopener noreferrer">
               <Button size="4" className="cursor-pointer!">
-                Liên hệ ngay
+                Khám phá dịch vụ
               </Button>
             </a>
           </div>

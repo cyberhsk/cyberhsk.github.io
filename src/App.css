@@ -19,3 +19,7 @@ html {
   background: #fcb045;
   cursor: pointer;
 }
+
+.calendar-dark iframe {
+  filter: invert(0.85) hue-rotate(180deg) brightness(0.95);
+}

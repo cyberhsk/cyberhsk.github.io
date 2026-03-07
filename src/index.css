@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@theme {
+  --font-sans: "Public Sans", "sans-serif";
+  --color-primary: #ec5b13;
+  --color-cyber-cyan: #00f3ff;
+}
+
+@layer components {
+  .cyber-gradient-bg {
+    background: radial-gradient(circle at top right, #1a0b2e 0%, #0d0616 100%);
+  }
+}

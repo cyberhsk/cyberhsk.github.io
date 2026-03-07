@@ -40,11 +40,13 @@ export function FlowRegisterSection() {
       id="flow-register"
     >
       <RandomDecorations count={6} />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <Flex direction="column" className="mb-8 gap-10">
-          <h3 className="text-center text-3xl lg:text-4xl font-extrabold  mb-4">
-            Quy Trình Hỗ Trợ Khách Hàng
-          </h3>
+          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+            Quy trình hỗ trợ <span className="text-primary">khách hàng</span>
+          </h1>
 
           <div className="relative">
             {/* Animated line */}
@@ -73,7 +75,7 @@ export function FlowRegisterSection() {
                   }}
                 >
                   {/* Icon container */}
-                  <div className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 bg-white/20 backdrop-blur-md border border-white/30 shadow-xl">
+                  <div className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 bg-[rgb(26_11_46/0.4)] backdrop-blur-md border border-white/30 shadow-xl">
                     <img
                       src={step.icon}
                       alt={step.title}

@@ -3,7 +3,7 @@ import { Footer, Header } from "./components";
 
 export const MainLayout = () => {
   return (
-    <div className="min-h-screen bg-[#2B004F]">
+    <div className="min-h-screen cyber-gradient-bg">
       <Header />
       <main>
         <Outlet />

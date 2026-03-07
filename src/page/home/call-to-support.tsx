@@ -1,13 +1,73 @@
 import rep_ib_icon from "@assets/image/rep-ib.png";
-import { Button } from "@radix-ui/themes";
+import { Button, Text } from "@radix-ui/themes";
 import { FloatingImage } from "@shared/components/animation";
 import { RandomDecorations } from "@shared/components/ui";
-import { PAGE_FB_URL } from "@shared/constant";
-import { MessageCircle } from "lucide-react";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  RegisterSupportForm,
+  registerSupportSchema,
+  type RegisterSupportFormValues,
+} from "@shared/components/form/register-support";
+import { LEVEL_HSK, PAGE_FB_ID } from "@shared/constant";
+import { useExamLocationStore, useHskPricingStore } from "@shared/store";
+import { convertPrice, messengerDeepLink } from "@shared/util";
+import { Rocket } from "lucide-react";
+import { useForm } from "react-hook-form";
+const DEFAULT_REGISTER_SUPPORT: RegisterSupportFormValues = {
+  level_hsk: "",
+  hsk_pricing: "",
+  exam_date: "",
+  exam_location: "",
+};
+
+type FormatSendToSaler = {
+  "Gói dịch vụ": string;
+  "Ngày thi": string;
+  "Cấp độ": string;
+  "Địa điểm": string;
+};
 export const CallToSupportSection = () => {
+  const locations = useExamLocationStore((s) => s.locations);
+  const hskPricings = useHskPricingStore((s) => s.pricings);
+  const form = useForm<RegisterSupportFormValues>({
+    resolver: zodResolver(registerSupportSchema),
+    values: DEFAULT_REGISTER_SUPPORT,
+    resetOptions: {
+      keepDirtyValues: true,
+    },
+    mode: "onSubmit",
+    reValidateMode: "onChange",
+  });
+  const handleSubmit = (data: RegisterSupportFormValues) => {
+    const hskPricing = hskPricings.find((p) => p.title == data.hsk_pricing);
+    const priceText =
+      hskPricing?.price == 0
+        ? "Miễn phí"
+        : convertPrice(hskPricing?.price || 0);
+    const unitText = hskPricing?.unit ? `${hskPricing?.unit}` : "";
+    const popularText = hskPricing?.popular ? " (Phổ biến)" : "";
+    const dataSendToSaler: FormatSendToSaler = {
+      "Gói dịch vụ": `${hskPricing?.title} - ${priceText}/${unitText} ${popularText}`,
+      "Ngày thi": data.exam_date,
+      "Cấp độ":
+        LEVEL_HSK[Number(data.level_hsk) as keyof typeof LEVEL_HSK]?.label ||
+        "",
+      "Địa điểm":
+        locations.find((l) => l.id === data.exam_location)?.name || "",
+    };
+    const go_to_messenger = messengerDeepLink(dataSendToSaler, PAGE_FB_ID);
+
+    window.open(go_to_messenger, "_blank");
+  };
   return (
-    <section className=" py-16 lg:py-24 relative overflow-hidden">
+    <section
+      className=" py-16 lg:py-24 relative overflow-hidden"
+      id="register-support"
+    >
       <RandomDecorations count={4} />
+      <div className="absolute  bottom-20 right-10 w-64 h-64   hidden md:block bg-cyber-cyan/10 rounded-full blur-[100px]"></div>
+      <div className="absolute  top-20 left-10 w-96 h-96  bg-primary/10 rounded-full blur-[120px]"></div>
       <FloatingImage
         src={rep_ib_icon}
         alt="rep-ib"
@@ -15,33 +75,23 @@ export const CallToSupportSection = () => {
       />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Bạn Đã Sẵn Sàng Thi HSK Chưa?
-          </h2>
-          <p className="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
-            Liên hệ ngay với chúng tôi để được tư vấn và hỗ trợ đăng ký thi HSK
-            nhanh chóng, thuận tiện nhất.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PAGE_FB_URL} target="_blank" rel="noopener noreferrer">
-              <Button
-                size="3"
-                className="cursor-pointer! font-semibold px-8 py-6 text-lg rounded-lg"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Liên hệ ngay
-              </Button>
-            </a>
-            <a href="#test-schedule">
-              <Button
-                size="3"
-                variant="outline"
-                className="cursor-pointer! border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg"
-              >
-                Xem lịch thi
-              </Button>
-            </a>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+            Đăng ký <span className="text-primary">Tư vấn</span>
+          </h1>
+          <Text color="gray" className="max-w-2xl mx-auto text-lg">
+            Liên hệ ngay với chúng tôi để được tư vấn và và giải đáp mọi thắc
+            mắc
+          </Text>
+          <RegisterSupportForm form={form} />
+          <div className="mt-10">
+            <Button
+              size="4"
+              className="w-full! cursor-pointer! items-center"
+              onClick={form.handleSubmit(handleSubmit)}
+            >
+              Đăng ký ngay <Rocket className="ml-2" />
+            </Button>
           </div>
         </div>
       </div>

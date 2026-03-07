@@ -1,19 +1,29 @@
 import { Flex, Text } from "@radix-ui/themes";
+import { RandomDecorations } from "@shared/components/ui";
 
 export const ExamScheduleSection = () => {
   return (
-    <section className="py-16 lg:py-24" id="test-schedule">
+    <section
+      className="py-16 lg:py-24 relative overflow-hidden"
+      id="test-schedule"
+    >
+      <RandomDecorations count={10} />
+      <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <Flex direction="column" align="center" gap="4" className="mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold ">Lịch Thi</h2>
+          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+            Lịch thi HSK{" "}
+            <span className="text-primary">{new Date().getFullYear()}</span>
+          </h1>
           <Text color="gray" className=" max-w-2xl mx-auto text-lg">
             Lịch thi được cập nhật theo các điểm thi
           </Text>
         </Flex>
 
         {/* Google Calendar Embed */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="calendar-dark rounded-2xl shadow-lg overflow-hidden">
           <iframe
             src="https://calendar.google.com/calendar/embed?src=981a8924899f21ea33698b1680d2129a891e98e9b53ef8cdeea16a2e37ec06e3%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh"
             style={{ border: "0" }}
@@ -21,7 +31,7 @@ export const ExamScheduleSection = () => {
             height="600"
             frameBorder="0"
             scrolling="no"
-          ></iframe>
+          />
         </div>
 
         {/* Note */}
