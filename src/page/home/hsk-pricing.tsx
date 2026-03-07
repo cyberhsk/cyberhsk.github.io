@@ -1,11 +1,17 @@
 import { Button, Text } from "@radix-ui/themes";
 import { RandomDecorations } from "@shared/components/ui";
 import { useHskPricingStore } from "@shared/store";
-import { cn, convertPrice } from "@shared/util";
+import { cn, convertPrice, trackEvent } from "@shared/util";
 import { Check, Zap } from "lucide-react";
 
 export const HskPricing = () => {
   const pricings = useHskPricingStore((s) => s.pricings);
+  const trackUserClickRegisterNow = (title: string, price: number) => {
+    trackEvent("hsk_pricing_click", {
+      pricing_title: title,
+      price: price,
+    });
+  };
   return (
     <section
       className="py-16 lg:py-24 relative overflow-hidden"
@@ -83,6 +89,9 @@ export const HskPricing = () => {
                     variant={pricing.popular ? "solid" : "outline"}
                     {...(pricing.popular ? {} : { color: "gray" })}
                     className="cursor-pointer! hover:bg-(--orange-10)! w-full! hover:text-white! rounded-xl border border-white/20 font-bold transition-colors"
+                    onClick={() =>
+                      trackUserClickRegisterNow(pricing.title, pricing.price)
+                    }
                   >
                     Đăng ký ngay
                   </Button>
