@@ -60,21 +60,23 @@ export function BannerSection() {
           />
 
           <div className="text-center md:text-left order-1 md:order-2">
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               CYBER <span className="text-[#00FFFF]">HSK</span>
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               GHI DANH
             </h1>
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <Flex className="items-center">
+
+            <Flex className="items-center mb-6 gap-3">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl grow md:grow-0 font-bold text-white">
                 <GradientText className="text-amber-500">
                   Nhanh Chóng
                 </GradientText>
-                <Zap className="inline-block ml-2" color="cyan" size={40} />
-              </Flex>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              </h1>
+              <Zap className="hidden md:inline-block" color="cyan" size={40} />
+            </Flex>
+
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
               Ghi danh hộ – Tư vấn kỳ thi – Chọn lịch thi phù hợp
             </p>
             <a href={PAGE_FB_URL} target="_blank" rel="noopener noreferrer">
