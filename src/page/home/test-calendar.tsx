@@ -13,11 +13,14 @@ export const ExamScheduleSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <Flex direction="column" align="center" gap="4" className="mb-12">
-          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-white font-black leading-tight tracking-tighter uppercase italic">
             Lịch thi HSK{" "}
             <span className="text-primary">{new Date().getFullYear()}</span>
           </h1>
-          <Text color="gray" className=" max-w-2xl mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Lịch thi được cập nhật theo các điểm thi
           </Text>
         </Flex>

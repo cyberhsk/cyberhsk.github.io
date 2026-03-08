@@ -1,5 +1,5 @@
 import the_boy_icon from "@assets/image/the-boy.png";
-import { Button, Flex } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 import { FloatingImage, GradientText } from "@shared/components/animation";
 import { Zap } from "lucide-react";
 
@@ -53,39 +53,38 @@ export function BannerSection() {
       </div>
 
       <div className="z-10 max-w-6xl mx-auto px-6 py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
           <FloatingImage
             src={the_boy_icon}
             alt="The boy"
-            className="hidden lg:block md:block w-full h-full object-cover"
+            className="order-2 xl:order-2 w-5/6 xl:w-full mx-auto"
           />
 
-          <div className="text-center md:text-left order-1 md:order-2">
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+          <Flex className="order-1 xl:order-2 flex-col gap-3 text-center ">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-7xl font-bold text-white leading-tight">
               CYBER <span className="text-[#00FFFF]">HSK</span>
             </h1>
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-7xl font-bold text-white leading-tight">
               GHI DANH
             </h1>
 
-            <Flex className="items-center mb-6 gap-3">
-              <h1 className="text-4xl md:text-4xl lg:text-5xl grow md:grow-0 font-bold text-white">
-                <GradientText className="text-amber-500">
-                  Nhanh Chóng
-                </GradientText>
-              </h1>
-              <Zap className="hidden md:inline-block" color="cyan" size={40} />
+            <Flex className="flex-col items-center text-center">
+              <Flex className="items-center gap-3">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-7xl whitespace-nowrap font-bold text-white">
+                  <GradientText className="text-amber-500">
+                    Nhanh Chóng
+                  </GradientText>
+                </h1>
+                <Zap
+                  className="hidden md:inline-block h-12 w-12"
+                  color="cyan"
+                />
+              </Flex>
             </Flex>
-
-            <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
-              Ghi danh hộ HSK – Tư vấn kỳ thi – Chọn lịch thi phù hợp
+            <p className="text-sm md:text-lg lg:text-2xl xl:text-xl 2xl:text-2xl text-gray-300 leading-relaxed">
+              Ghi danh hộ HSK – Tư vấn kỳ thi
             </p>
-            <a href={"#about-us"} rel="noopener noreferrer">
-              <Button size="4" className="cursor-pointer!">
-                Khám phá dịch vụ
-              </Button>
-            </a>
-          </div>
+          </Flex>
         </div>
       </div>
     </section>

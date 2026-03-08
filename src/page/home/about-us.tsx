@@ -19,34 +19,34 @@ export function AboutUsSection() {
                 <FloatingImage
                   src={team_icon}
                   alt="team"
-                  className="w-full h-full object-cover"
+                  className="w-4/5 lg:w-full"
                 />
               </div>
             </div>
 
             {/* Content on right */}
             <Flex className="flex-1 text-center flex-col lg:text-left">
-              <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+              <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-center text-white  font-black leading-tight tracking-tighter mb-4 uppercase italic">
                 Đội ngũ của <span className="text-primary">CYBER HSK</span>
               </h1>
-              <Flex className="flex-col gap-2">
+              <Flex className="text-sm md:text-lg lg:text-2xl 2xl:text-3xl flex-col gap-2  text-justify">
                 <Flex className="flex-row items-top gap-2">
                   <Dot color="cyan" size={40} />
-                  <Text className="leading-relaxed text-lg mb-4">
+                  <Text className="leading-relaxed mb-4">
                     CYBER HSK là đội ngũ chuyên hỗ trợ học viên ghi danh để thi
                     HSK một cách nhanh chóng và thuận tiện nhất.
                   </Text>
                 </Flex>
                 <Flex className="flex-row items-top gap-2">
                   <Dot color="cyan" size={40} />
-                  <Text className="leading-relaxed text-lg mb-4">
+                  <Text className="leading-relaxed mb-4">
                     Ngoài ra chúng tôi cũng tư vấn về kỳ thi HSK và LẤY CHỨNG
                     CHỈ SỚM giúp học viên apply học bổng hoặc xét tốt nghiệp
                   </Text>
                 </Flex>
                 <Flex className="flex-row items-top gap-2">
                   <Dot color="cyan" size={40} />
-                  <Text className="leading-relaxed text-lg">
+                  <Text className="leading-relaxed mb-4">
                     Với nhiều năm kinh nghiệm, chúng tôi cam kết mang đến dịch
                     vụ đáng tin cậy và hỗ trợ tận tâm.
                   </Text>

@@ -13,7 +13,7 @@ import {
 const features = [
   {
     icon: Zap,
-    title: "Quy trình gọn lẹ",
+    title: "Quy trình Nhanh Gọn",
     description:
       "Quy trình làm việc đơn giản, tiết kiệm thời gian. Bạn chỉ cần điền thông tin cá nhân xong thì mọi việc còn lại để chúng tôi lo.",
   },
@@ -21,17 +21,17 @@ const features = [
     icon: HeadphonesIcon,
     title: "Hỗ Trợ Tận Tâm",
     description:
-      "Đội ngũ tư vấn viên nhiệt tình, sẵn sàng giải đáp mọi thắc mắc 24/7.",
+      "Đội ngũ tư vấn viên nhiệt tình, sẵn sàng giải đáp mọi thắc mắc",
   },
   {
     icon: ShieldCheck,
-    title: "Bảo mật thông tin",
+    title: "Bảo mật Thông tin",
     description:
       "Chúng tôi cam kết bảo mật toàn bộ thông tin cá nhân của bạn, đảm bảo an toàn tuyệt đối.",
   },
   {
     icon: CircleDollarSign,
-    title: "Giá cả hợp lý",
+    title: "Giá Niêm Yết Rõ Ràng",
     description:
       "Chúng tôi cam kết giá cả hợp lý, minh bạch và cạnh tranh nhất thị trường.",
   },
@@ -45,11 +45,14 @@ export const WhyChooseUsSection = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
-            tại sao <span className="text-primary">bạn nên chọn</span> Cyber hsk
+          <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-center text-white font-black leading-tight tracking-tighter mb-4 uppercase italic">
+            <span className="text-primary">bạn nên chọn</span> Cyber hsk vì
           </h1>
 
-          <Text color="gray" className="max-w-2xl mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Chúng tôi cam kết mang đến trải nghiệm đăng ký thi HSK tốt nhất cho
             bạn
           </Text>
@@ -59,16 +62,16 @@ export const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <Floating delay={index * 0.12} key={index}>
               <Card className="h-full bg-[rgb(26_11_46/0.4)] backdrop-blur-xs border-white/20  transition-colors">
-                <CardContent className="p-8">
+                <CardContent className="p-5">
                   <div className="flex items-start gap-5">
                     <div className="w-14 h-14 rounded-xl flex items-center justify-center ">
                       <feature.icon className="w-7 h-7 text-amber-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">
+                      <h3 className="text-lg md:text-lg 2xl:text-xl font-semibold mb-2">
                         {feature.title}
                       </h3>
-                      <Text color="gray" className="leading-relaxed">
+                      <Text color="gray" className="text-base leading-relaxed">
                         {feature.description}
                       </Text>
                     </div>

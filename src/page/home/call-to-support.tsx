@@ -72,15 +72,18 @@ export const CallToSupportSection = () => {
       <FloatingImage
         src={rep_ib_icon}
         alt="rep-ib"
-        className="absolute h-70 right-0 top-10"
+        className="absolute hidden md:block h-70 right-0 top-10"
       />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+          <h1 className="text-2xl  md:text-4xl lg:text-4xl 2xl:text-5xl text-center text-white font-black leading-tight tracking-tighter mb-4 uppercase italic">
             Đăng ký <span className="text-primary">Tư vấn</span>
           </h1>
-          <Text color="gray" className="max-w-2xl mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Liên hệ ngay với chúng tôi để được tư vấn và và giải đáp mọi thắc
             mắc
           </Text>

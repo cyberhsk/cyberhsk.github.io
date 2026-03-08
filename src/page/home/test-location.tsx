@@ -14,10 +14,13 @@ export const TestLocationsSection = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-center text-white font-black leading-tight tracking-tighter mb-4 uppercase italic">
             <span className="text-primary">Địa điểm</span> thi hsk
           </h1>
-          <Text color="gray" className="max-w-2xl mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Các địa điểm tổ chức thi HSK trên toàn quốc
           </Text>
         </div>
@@ -40,19 +43,21 @@ export const TestLocationsSection = () => {
                     />
 
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white mb-2">
+                      <h3 className="text-base font-semibold text-white mb-2">
                         {location.name}
                       </h3>
                       <Flex gap="2" align="center">
                         {location.exam_type == "computer" ? (
                           <>
-                            <Laptop className="w-4 h-4 text-amber-500" />
-                            <span className="text-sm font-medium">Thi máy</span>
+                            <Laptop className="w-6 h-6 text-amber-500" />
+                            <span className="text-base font-medium">
+                              Thi máy
+                            </span>
                           </>
                         ) : (
                           <>
-                            <NotepadText className="w-4 h-4 text-amber-500" />
-                            <span className="text-sm font-medium">
+                            <NotepadText className="w-6 h-6 text-amber-500" />
+                            <span className="text-base font-medium">
                               Thi giấy
                             </span>
                           </>
@@ -63,8 +68,8 @@ export const TestLocationsSection = () => {
                         target="_blank"
                         className="flex items-start gap-2 mt-2 text-gray-300 hover:text-white cursor-pointer"
                       >
-                        <MapPin className="w-4 h-4 mt-0.5 text-amber-500" />
-                        <span className="text-sm">{location.address}</span>
+                        <MapPin className="min-w-6 h-6 mt-0.5 text-amber-500" />
+                        <span className="text-base">{location.address}</span>
                       </a>
                     </div>
                   </div>

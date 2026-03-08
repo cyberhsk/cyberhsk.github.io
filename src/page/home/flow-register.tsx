@@ -11,25 +11,25 @@ const steps = [
     icon: gg_form_icon,
     title: "Làm hồ sơ",
     description: "Bạn thông tin để làm hồ sơ ghi danh",
-    className: "w-auto h-20",
+    className: "w-auto h-15",
   },
   {
     icon: computer_icon,
     title: "Ghi danh",
     description: "CYBER HSK ghi danh cho bạn",
-    className: "w-auto h-20",
+    className: "w-auto h-15",
   },
   {
     icon: email_icon,
     title: "Xác nhận email",
     description: "Bạn nhận email ghi danh thành công",
-    className: "w-auto h-20",
+    className: "w-auto h-15",
   },
   {
     icon: transfer_icon,
     title: "Thanh toán",
     description: "Bạn thanh toán phí ghi danh",
-    className: "w-25 h-20",
+    className: "w-20 h-15 2xl:w-30",
   },
 ];
 
@@ -44,10 +44,13 @@ export function FlowRegisterSection() {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <Flex direction="column" gap="4" className="mb-8">
-          <h1 className="text-center text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-center text-white font-black leading-tight tracking-tighter uppercase italic">
             Quy trình <span className="text-primary">ghi danh</span>
           </h1>
-          <Text color="gray" className="text-center w-full mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Chúng tôi chỉ nhận ĐẦY ĐỦ chi phí khi bạn nhận được email ghi danh
             thành công từ điểm thi
           </Text>
@@ -55,14 +58,14 @@ export function FlowRegisterSection() {
         <div className="relative mt-10!">
           {/* Animated line */}
           <motion.div
-            className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 
+            className="hidden md:block absolute top-13 lg:top-16 2xl:top-20 left-0 right-0 h-0.5 
     bg-linear-to-r from-amber-500 via-amber-400 to-amber-500 origin-left"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ amount: 0.3 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
@@ -79,17 +82,21 @@ export function FlowRegisterSection() {
                 }}
               >
                 {/* Icon container */}
-                <div className="w-32 h-32 rounded-2xl flex items-center justify-center mb-6 bg-[rgb(26_11_46/0.4)] backdrop-blur-md border border-white/30 shadow-xl">
+                <div className="w-25 h-25 lg:h-30 lg:w-30 2xl:h-40 2xl:w-40 rounded-2xl flex items-center justify-center mb-6 bg-[rgb(26_11_46/0.4)] backdrop-blur-md border border-white/30 shadow-xl">
                   <img
                     src={step.icon}
                     alt={step.title}
-                    className={cn(step.className)}
+                    className={cn(step.className, "lg:h-20 2xl:h-25")}
                   />
                 </div>
 
                 {/* Content */}
-                <h4 className="text-xl font-semibold mb-2">{step.title}</h4>
-                <Text color="gray">{step.description}</Text>
+                <h4 className="text-base lg:text-lg 2xl:text-xl font-semibold mb-2">
+                  {step.title}
+                </h4>
+                <Text color="gray" className="text-sm lg:text-base 2xl:text-lg">
+                  {step.description}
+                </Text>
               </motion.div>
             ))}
           </div>

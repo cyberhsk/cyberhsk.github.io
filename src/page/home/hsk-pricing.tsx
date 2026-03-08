@@ -22,10 +22,13 @@ export const HskPricing = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter mb-4 uppercase italic">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-white font-black leading-tight tracking-tighter mb-4 uppercase italic">
             Chọn Gói <span className="text-primary">Dịch VỤ</span>
           </h1>
-          <Text color="gray" className="max-w-2xl mx-auto text-lg">
+          <Text
+            color="gray"
+            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+          >
             Chọn gói phù hợp để đăng ký thi HSK nhanh chóng và hiệu quả nhất.
           </Text>
         </div>
@@ -34,7 +37,7 @@ export const HskPricing = () => {
             <div
               key={index}
               className={cn(
-                "relative rounded-3xl border border-white/30 p-8 flex flex-col transition-transform duration-300 hover:scale-105",
+                "relative rounded-3xl border border-white/30 p-5 flex flex-col transition-transform duration-300 hover:scale-105",
                 pricing.popular &&
                   "border-cyan-500 shadow-lg shadow-cyan-500/50",
               )}
@@ -74,9 +77,9 @@ export const HskPricing = () => {
                 {pricing.serrvices.map((service, index) => (
                   <li key={index} className="flex items-start gap-3">
                     {service.important ? (
-                      <Zap color="cyan" />
+                      <Zap color="cyan" className="min-w-6 min-h-6" />
                     ) : (
-                      <Check color="cyan" />
+                      <Check color="cyan" className="min-w-6 min-h-6" />
                     )}
                     <span className="text-gray-300">{service.text}</span>
                   </li>

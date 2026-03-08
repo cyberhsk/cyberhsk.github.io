@@ -30,7 +30,7 @@ export const RegisterSupportForm = ({
 
   return (
     <form className="space-y-6 mt-10">
-      <Flex className="flex-row gap-3">
+      <Flex className="flex-col lg:flex-row gap-3">
         <Flex className="flex-col grow min-w-0 gap-2">
           <Text as="label" className="text-start">
             Cấp độ HSK
@@ -84,7 +84,7 @@ export const RegisterSupportForm = ({
           )}
         </Flex>
       </Flex>
-      <Flex className="flex-row gap-3">
+      <Flex className="flex-col lg:flex-row gap-3">
         <Flex className="flex-col grow min-w-0 gap-2">
           <Text as="label" className="text-start">
             Địa điểm
