@@ -24,6 +24,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: SPA fallback
+        run: cp dist/index.html dist/404.html
+
       - name: Check if dist exists
         run: ls -R dist
 
