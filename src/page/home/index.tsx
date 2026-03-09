@@ -13,23 +13,23 @@ export function HomePage() {
   return (
     <Flex direction="column">
       <BannerSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <AboutUsSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <FlowRegisterSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <TestLocationsSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <ExamScheduleSection />
       {/* <Separator my="2" size="4" />
       <CenterAndTutorSection /> */}
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <WhyChooseUsSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <HskPricing />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <CallToSupportSection />
-      <Separator my="2" size="4" />
+      <Separator size="4" />
       <PartnerSection />
     </Flex>
   );

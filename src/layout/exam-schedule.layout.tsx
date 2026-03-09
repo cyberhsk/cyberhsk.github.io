@@ -29,7 +29,7 @@ const Header = () => {
   );
 };
 
-export const TermAndPolicyLayout = () => {
+export const ExamScheduleLayout = () => {
   return (
     <div className="min-h-screen cyber-gradient-bg">
       <Header />

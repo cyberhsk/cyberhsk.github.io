@@ -4,7 +4,7 @@ export async function getSheetData({
 }: {
   sheetId: string;
   sheetName: string;
-}) {
+}): Promise<any[]> {
   const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}&headers=1`;
   const res = await fetch(url);
   const text = await res.text();

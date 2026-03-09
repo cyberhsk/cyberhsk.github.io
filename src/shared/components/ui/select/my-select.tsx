@@ -18,9 +18,9 @@ export function MySelect<T>({
   ...rest
 }: PartnerSelectProps<T>) {
   return (
-    <Flex direction="column" width="100%" height="100%">
+    <Flex direction="column" className="w-full! h-full!">
       <Select.Root value={value} onValueChange={onChange}>
-        <Select.Trigger className="h-full!" {...rest} />
+        <Select.Trigger className="h-full! w-full!" {...rest} />
 
         <Select.Content position="popper" className={GLASS_EFFECT_CLASSNAMES}>
           {options.length > 0 &&

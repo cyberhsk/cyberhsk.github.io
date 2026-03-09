@@ -1,4 +1,6 @@
+import { ExamScheduleLayout } from "@layout/exam-schedule.layout";
 import { MainLayout, TermAndPolicyLayout } from "@layout/index";
+import { ExamSchedulePage } from "@page/exam-schedule";
 import { PrivacyPolicyPage } from "@page/privacy-policy";
 import { TermsOfServicePage } from "@page/terms-of-service";
 import { ScrollToTop } from "@shared/components/feat";
@@ -17,6 +19,10 @@ export const AppRouter = () => {
         <Route element={<TermAndPolicyLayout />}>
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+        </Route>
+
+        <Route element={<ExamScheduleLayout />}>
+          <Route path="/lich-thi-hsk" element={<ExamSchedulePage />} />
         </Route>
 
         {/* Main Layout */}

@@ -1,5 +1,6 @@
-import { Flex, Text } from "@radix-ui/themes";
+import { Button, Flex, Text } from "@radix-ui/themes";
 import { RandomDecorations } from "@shared/components/ui";
+import { NavLink } from "react-router-dom";
 
 export const ExamScheduleSection = () => {
   return (
@@ -19,14 +20,22 @@ export const ExamScheduleSection = () => {
           </h1>
           <Text
             color="gray"
-            className="text-base md:text-lg 2xl:text-2xl text-justify md:text-center w-full mx-auto"
+            className="text-base md:text-lg 2xl:text-2xl text-center w-full mx-auto"
           >
             Lịch thi được cập nhật theo các điểm thi
           </Text>
+          <NavLink to="/lich-thi-hsk" className="mt-5 text-primary mx-auto">
+            <Button
+              size={{ initial: "2", sm: "3", md: "4" }}
+              className="cursor-pointer!"
+            >
+              Đến trang tra cứu lịch thi
+            </Button>
+          </NavLink>
         </Flex>
 
         {/* Google Calendar Embed */}
-        <div className="calendar-dark rounded-2xl shadow-lg overflow-hidden">
+        {/* <div className="calendar-dark rounded-2xl shadow-lg overflow-hidden">
           <iframe
             src="https://calendar.google.com/calendar/embed?src=981a8924899f21ea33698b1680d2129a891e98e9b53ef8cdeea16a2e37ec06e3%40group.calendar.google.com&ctz=Asia%2FHo_Chi_Minh"
             style={{ border: "0" }}
@@ -35,7 +44,7 @@ export const ExamScheduleSection = () => {
             frameBorder="0"
             scrolling="no"
           />
-        </div>
+        </div> */}
 
         {/* Note */}
         <Flex justify="center" className=" mt-6">

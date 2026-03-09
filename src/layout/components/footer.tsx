@@ -8,7 +8,6 @@ const quickLinks = [
   { name: "Giới thiệu", href: "#about-us" },
   { name: "Quy trình", href: "#flow-register" },
   { name: "Địa điểm", href: "#locations" },
-  { name: "Lịch thi", href: "#test-schedule" },
   // { name: "Trung tâm & Gia sư", href: "#center-and-tutor" },
   { name: "Bảng giá", href: "#hsk-pricing" },
   { name: "Đối tác", href: "#partners" },
@@ -56,12 +55,22 @@ export function Footer() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <NavLink
+                    to="/lich-thi-hsk"
+                    className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                  >
+                    Lịch thi
+                  </NavLink>
+                </li>
               </ul>
             </div>
 
             {/* Legal Links */}
             <div>
-              <h3 className="font-semibold text-lg mb-4">Pháp lý</h3>
+              <h3 className="font-semibold text-lg mb-4">
+                Chính sách & Điều khoản
+              </h3>
               <ul className="space-y-2">
                 {legalLinks.map((link) => (
                   <li key={link.href}>

@@ -1,6 +1,7 @@
 import logo from "@assets/logo.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -9,7 +10,6 @@ export function Header() {
     { name: "Giới thiệu", href: "#about-us" },
     { name: "Quy trình", href: "#flow-register" },
     { name: "Địa điểm", href: "#locations" },
-    { name: "Lịch thi", href: "#test-schedule" },
     // { name: "Trung tâm & Gia sư", href: "#center-and-tutor" },
     { name: "Bảng giá", href: "#hsk-pricing" },
     { name: "Đối tác", href: "#partners" },
@@ -37,6 +37,12 @@ export function Header() {
                 {link.name}
               </a>
             ))}
+            <NavLink
+              to="/lich-thi-hsk"
+              className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium transition-colors text-gray-300 hover:text-amber-500"
+            >
+              Lịch thi
+            </NavLink>
           </nav>
 
           <button
@@ -59,6 +65,12 @@ export function Header() {
                   {link.name}
                 </a>
               ))}
+              <NavLink
+                to="/lich-thi-hsk"
+                className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium transition-colors text-gray-300 hover:text-amber-500"
+              >
+                Lịch thi
+              </NavLink>
             </nav>
           </div>
         )}

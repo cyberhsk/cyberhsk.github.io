@@ -26,4 +26,15 @@ export const getPageAvatarUrl = (pageId: string) => {
   return `https://graph.facebook.com/${pageId}/picture?width=200&height=200`;
 };
 
+export const getExamDateObject = (date: string) => {
+  return new Date(`${date}T00:00:00+07:00`);
+};
+
+export const formatExamDate = (date: Date) => {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${d}.${m}.${y}`;
+};
+
 export * from "./gg-sheet";
