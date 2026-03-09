@@ -34,9 +34,9 @@ const months = [
 ];
 
 const formats = [
-  { id: "all", name: "Cả hai" },
-  { id: "computer", name: "Máy tính" },
-  { id: "paper", name: "Giấy" },
+  { id: "all", name: "Máy & Giấy" },
+  { id: "computer", name: "Trên Máy" },
+  { id: "paper", name: "Trên Giấy" },
 ];
 
 const years = Array.from({ length: 10 }, (_, i) => {

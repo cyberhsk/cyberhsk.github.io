@@ -78,7 +78,7 @@ export const ExamScheduleCard = memo(
               }
               className="text-base px-2 py-0.5 rounded border border-(--accent-10)/50 text-(--accent-10) font-bold"
             >
-              {examSchedule.format === "computer" ? "Máy tính" : "Giấy"}
+              {examSchedule.format === "computer" ? "Trên Máy" : "Trên Giấy"}
             </span>
           </div>
         </div>
