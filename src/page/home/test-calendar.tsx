@@ -16,7 +16,7 @@ export const ExamScheduleSection = () => {
       <RandomDecorations count={10} />
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-[120px]"></div>
-      <div className="container mx-auto px-4">
+      <div className="relative container mx-auto px-4 z-10">
         {/* Section Header */}
         <Flex direction="column" align="center" gap="4" className="mb-12">
           <h1 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl text-white font-black leading-tight tracking-tighter uppercase italic">
