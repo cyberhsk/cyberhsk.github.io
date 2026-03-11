@@ -7,13 +7,14 @@ import {
   CircleCheckBig,
   CircleDollarSign,
   HeadphonesIcon,
+  HeartHandshake,
   ShieldCheck,
   Zap,
 } from "lucide-react";
 
 const features = [
   {
-    icon: ShieldCheck,
+    icon: HeartHandshake,
     title: "Sự An Tâm",
     description:
       "Những dịch vụ giá rẻ cùng lời hứa “chắc slot 100%” trên thị trường tiềm ẩn rất nhiều rủi ro. Không ít người đã rơi vào tình trạng mất tiền nhưng không nhận được dịch vụ như cam kết. Người ta gọi là tiền mất tật mang :))",
