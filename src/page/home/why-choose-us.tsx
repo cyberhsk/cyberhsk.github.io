@@ -4,6 +4,7 @@ import { Text } from "@radix-ui/themes";
 import { Floating } from "@shared/components/animation";
 import { Card, CardContent, RandomDecorations } from "@shared/components/ui";
 import {
+  CircleCheckBig,
   CircleDollarSign,
   HeadphonesIcon,
   ShieldCheck,
@@ -12,28 +13,40 @@ import {
 
 const features = [
   {
+    icon: ShieldCheck,
+    title: "Sự An Tâm",
+    description:
+      "Những dịch vụ giá rẻ cùng lời hứa “chắc slot 100%” trên thị trường tiềm ẩn rất nhiều rủi ro. Không ít người đã rơi vào tình trạng mất tiền nhưng không nhận được dịch vụ như cam kết. Người ta gọi là tiền mất tật mang :))",
+  },
+  {
+    icon: CircleCheckBig,
+    title: "Thương hiệu",
+    description:
+      "Chúng tôi là thương hiệu uy tín nhiều năm trong nghề, được nhiều người tin dùng và lựa chọn. Mong là không bị đối thủ chơi xấu :))",
+  },
+  {
     icon: Zap,
     title: "Quy trình Nhanh Gọn",
     description:
-      "Quy trình làm việc đơn giản, tiết kiệm thời gian. Bạn chỉ cần điền thông tin cá nhân xong thì mọi việc còn lại để chúng tôi lo.",
+      "Quy trình làm việc đơn giản, tiết kiệm thời gian. Bạn chỉ cần điền thông tin cá nhân xong thì mọi việc còn lại để chúng tôi lo. Vua chúa cũng chỉ đến thế :))",
   },
   {
     icon: HeadphonesIcon,
     title: "Hỗ Trợ Tận Tâm",
     description:
-      "Đội ngũ tư vấn viên nhiệt tình, sẵn sàng giải đáp mọi thắc mắc",
+      "Đội ngũ tư vấn viên nhiệt tình, thường xuyên online trả lời tin nhắn. Có thể buôn/tám chuyện với bạn nếu cần :))",
   },
   {
     icon: ShieldCheck,
     title: "Bảo mật Thông tin",
     description:
-      "Chúng tôi cam kết bảo mật toàn bộ thông tin cá nhân của bạn, đảm bảo an toàn tuyệt đối.",
+      "Chúng tôi cam kết bảo mật toàn bộ thông tin cá nhân của bạn, chỉ có quản lý và cộng tác viên được phân quyền mới có thể tiếp cận. Không ai có thể lừa đảo bạn cả :))",
   },
   {
     icon: CircleDollarSign,
-    title: "Giá Niêm Yết Rõ Ràng",
+    title: "Giá Cả Niêm Yết Rõ Ràng",
     description:
-      "Chúng tôi cam kết giá cả hợp lý, minh bạch và cạnh tranh nhất thị trường.",
+      "Chúng tôi cam kết giá cả minh bạch và cạnh tranh nhất thị trường. Tiền nào của nấy :))",
   },
 ];
 
