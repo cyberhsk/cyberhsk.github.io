@@ -1,8 +1,13 @@
 import { Button, Flex, Text } from "@radix-ui/themes";
 import { RandomDecorations } from "@shared/components/ui";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ExamScheduleSection = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/lich-thi-hsk");
+  };
   return (
     <section
       className="py-16 lg:py-24 relative overflow-hidden"
@@ -24,14 +29,14 @@ export const ExamScheduleSection = () => {
           >
             Lịch thi được cập nhật theo các điểm thi
           </Text>
-          <NavLink to="/lich-thi-hsk" className="mt-5 text-primary mx-auto">
-            <Button
-              size={{ initial: "2", sm: "3", md: "4" }}
-              className="cursor-pointer!"
-            >
-              Đến trang tra cứu lịch thi
-            </Button>
-          </NavLink>
+
+          <Button
+            size={{ initial: "2", sm: "3", md: "4" }}
+            className="cursor-pointer!"
+            onClick={handleClick}
+          >
+            Đến trang tra cứu lịch thi
+          </Button>
         </Flex>
 
         {/* Google Calendar Embed */}
