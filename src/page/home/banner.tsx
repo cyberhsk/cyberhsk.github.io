@@ -1,5 +1,5 @@
 import the_boy_icon from "@assets/image/the-boy.png";
-import { Flex } from "@radix-ui/themes";
+import { Button, Flex } from "@radix-ui/themes";
 import { FloatingImage, GradientText } from "@shared/components/animation";
 import { Zap } from "lucide-react";
 
@@ -84,6 +84,17 @@ export function BannerSection() {
             <p className="text-sm md:text-lg lg:text-2xl xl:text-xl 2xl:text-2xl text-gray-300 leading-relaxed">
               Ghi danh hộ HSK – Tư vấn kỳ thi
             </p>
+            <div className="mt-5">
+              <a href="#register-support">
+                <Button
+                  variant="solid"
+                  className="cursor-pointer!"
+                  size={{ initial: "2", md: "4", lg: "4" }}
+                >
+                  Đăng Ký Tư Vấn Ngay
+                </Button>
+              </a>
+            </div>
           </Flex>
         </div>
       </div>
