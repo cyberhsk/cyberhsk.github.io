@@ -5,7 +5,7 @@ import { CircleDot } from "lucide-react";
 import { useEffect } from "react";
 
 export function CommissionRateSection() {
-  const { commissionRates, loading, loadRates } = useCommissionRateStore();
+  const { commissionRates, loadRates } = useCommissionRateStore();
   useEffect(() => {
     loadRates();
   }, []);

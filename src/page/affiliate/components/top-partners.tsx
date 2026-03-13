@@ -3,7 +3,7 @@ import { useTopPartnerStore } from "@shared/store/top-partner";
 import { useEffect } from "react";
 
 export function TopPartnersSection() {
-  const { loadPartners, partners, loading } = useTopPartnerStore();
+  const { loadPartners, partners } = useTopPartnerStore();
   useEffect(() => {
     loadPartners();
   }, [loadPartners]);
