@@ -26,7 +26,9 @@ type FormatSendToSaler = {
   "Ngày thi": string;
   "Cấp độ": string;
   "Địa điểm": string;
+  ref_code?: string;
 };
+
 export const CallToSupportSection = () => {
   const locations = useExamLocationStore((s) => s.locations);
   const hskPricings = useHskPricingStore((s) => s.pricings);
@@ -47,6 +49,10 @@ export const CallToSupportSection = () => {
         : convertPrice(hskPricing?.price || 0);
     const unitText = hskPricing?.unit ? `${hskPricing?.unit}` : "";
     const popularText = hskPricing?.popular ? " (Phổ biến)" : "";
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref_code = urlParams.get("ref_code");
+
     const dataSendToSaler: FormatSendToSaler = {
       "Gói dịch vụ": `${hskPricing?.title} - ${priceText}/${unitText} ${popularText}`,
       "Ngày thi": data.exam_date,
@@ -56,6 +62,11 @@ export const CallToSupportSection = () => {
       "Địa điểm":
         locations.find((l) => l.id === data.exam_location)?.name || "",
     };
+
+    if (ref_code) {
+      dataSendToSaler["ref_code"] = ref_code;
+    }
+
     const go_to_messenger = messengerDeepLink(dataSendToSaler, PAGE_FB_ID);
     ggTrackEvent("register_support_click", dataSendToSaler);
     window.open(go_to_messenger, "_blank");
