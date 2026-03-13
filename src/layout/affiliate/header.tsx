@@ -1,18 +1,14 @@
 import logo from "@assets/logo.png";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-export function Header() {
+export function AffiliateHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Trang chủ", href: "#" },
-    { name: "Giới thiệu", href: "#about-us" },
-    { name: "Quy trình", href: "#flow-register" },
-    { name: "Địa điểm", href: "#locations" },
-    // { name: "Trung tâm & Gia sư", href: "#center-and-tutor" },
-    { name: "Bảng giá", href: "#hsk-pricing" },
-    // { name: "Đối tác", href: "#partners" },
+    { name: "Dịch vụ", href: "#service" },
+    { name: "Quyền lợi", href: "#benefits" },
+    { name: "Hoa hồng", href: "#commission" },
+    { name: "Quy trình", href: "#flow-affiliate" },
   ];
 
   return (
@@ -37,18 +33,6 @@ export function Header() {
                 {link.name}
               </a>
             ))}
-            <NavLink
-              to="/lich-thi-hsk"
-              className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium transition-colors text-gray-300 hover:text-amber-500"
-            >
-              Lịch thi
-            </NavLink>
-            <NavLink
-              to="/affiliate"
-              className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium transition-colors text-gray-300 hover:text-amber-500"
-            >
-              Affiliate
-            </NavLink>
           </nav>
 
           <button
@@ -71,12 +55,6 @@ export function Header() {
                   {link.name}
                 </a>
               ))}
-              <NavLink
-                to="/lich-thi-hsk"
-                className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium transition-colors text-gray-300 hover:text-amber-500"
-              >
-                Lịch thi
-              </NavLink>
             </nav>
           </div>
         )}

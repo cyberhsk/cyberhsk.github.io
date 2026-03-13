@@ -1,8 +1,12 @@
+import { AffiliateLayout } from "@layout/affiliate";
 import { ExamScheduleLayout } from "@layout/exam-schedule.layout";
 import { MainLayout, TermAndPolicyLayout } from "@layout/index";
-import { ExamSchedulePage } from "@page/exam-schedule";
-import { PrivacyPolicyPage } from "@page/privacy-policy";
-import { TermsOfServicePage } from "@page/terms-of-service";
+import {
+  AffiliatePage,
+  ExamSchedulePage,
+  PrivacyPolicyPage,
+  TermsOfServicePage,
+} from "@page/index";
 import { ScrollToTop } from "@shared/components/feat";
 import { Role } from "@shared/types";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -23,6 +27,10 @@ export const AppRouter = () => {
 
         <Route element={<ExamScheduleLayout />}>
           <Route path="/lich-thi-hsk" element={<ExamSchedulePage />} />
+        </Route>
+
+        <Route element={<AffiliateLayout />}>
+          <Route path="/affiliate" element={<AffiliatePage />} />
         </Route>
 
         {/* Main Layout */}
