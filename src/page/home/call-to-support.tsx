@@ -11,7 +11,7 @@ import {
 } from "@shared/components/form/register-support";
 import { LEVEL_HSK, PAGE_FB_ID } from "@shared/constant";
 import { useExamLocationStore, useHskPricingStore } from "@shared/store";
-import { convertPrice, messengerDeepLink, trackEvent } from "@shared/util";
+import { convertPrice, ggTrackEvent, messengerDeepLink } from "@shared/util";
 import { Rocket } from "lucide-react";
 import { useForm } from "react-hook-form";
 const DEFAULT_REGISTER_SUPPORT: RegisterSupportFormValues = {
@@ -57,7 +57,7 @@ export const CallToSupportSection = () => {
         locations.find((l) => l.id === data.exam_location)?.name || "",
     };
     const go_to_messenger = messengerDeepLink(dataSendToSaler, PAGE_FB_ID);
-    trackEvent("register_support_click", dataSendToSaler);
+    ggTrackEvent("register_support_click", dataSendToSaler);
     window.open(go_to_messenger, "_blank");
   };
 

@@ -1,13 +1,13 @@
 import { Button, Flex, Text } from "@radix-ui/themes";
 import { RandomDecorations } from "@shared/components/ui";
 import { useHskPricingStore } from "@shared/store";
-import { cn, convertPrice, trackEvent } from "@shared/util";
+import { cn, convertPrice, ggTrackEvent } from "@shared/util";
 import { Check, Dot, Zap } from "lucide-react";
 
 export const HskPricing = () => {
   const pricings = useHskPricingStore((s) => s.pricings);
   const trackUserClickRegisterNow = (title: string, price: number) => {
-    trackEvent("hsk_pricing_click", {
+    ggTrackEvent("hsk_pricing_click", {
       pricing_title: title,
       price: price,
     });

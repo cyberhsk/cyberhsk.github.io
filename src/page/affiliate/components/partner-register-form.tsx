@@ -1,13 +1,14 @@
 import { Button, Separator } from "@radix-ui/themes";
 import { PAGE_FB_ID } from "@shared/constant";
-import { messengerDeepLink, trackEvent } from "@shared/util";
+import { ggTrackEvent, messengerDeepLink, metaTrackEvent } from "@shared/util";
 import { Send } from "lucide-react";
 
 export function PartnerRegisterFormSection() {
   const handleSendPartnerRegister = () => {
     const dataSendToSaler = { "Đăng ký": "affiliate" };
     const go_to_messenger = messengerDeepLink(dataSendToSaler, PAGE_FB_ID);
-    trackEvent("register_affiliate", dataSendToSaler);
+    ggTrackEvent("register_affiliate", dataSendToSaler);
+    metaTrackEvent("register_affiliate", dataSendToSaler);
     window.open(go_to_messenger, "_blank");
   };
   return (
